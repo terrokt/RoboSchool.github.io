@@ -1,0 +1,43 @@
+.hero {
+  padding-top: 165px;
+
+  background-color: var(--dark-color);
+
+  &__container {
+    @include flex;
+    align-items: center;
+
+  }
+
+  &__content {
+    max-width: 516px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    color: var(--light-color);
+    margin-bottom: 50px;
+
+    &-text {
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    transform: translateX(50px);
+  }
+
+
+}

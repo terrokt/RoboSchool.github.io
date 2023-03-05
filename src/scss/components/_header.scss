@@ -1,0 +1,37 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 30px;
+
+  &__container {
+    @include flex-all-sb;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 160%;
+    color: #FFFFFF;
+  }
+}
