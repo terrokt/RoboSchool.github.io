@@ -1,0 +1,45 @@
+.application {
+  @include image-set("../img/percents");
+
+  padding: 87px 0;
+  background-color: var(--accent-color);
+  background-size: cover;
+  background-position: bottom center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    grid-column: 5 span;
+    padding-left: 60px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    color: var(--light-color);
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--light-color);
+  }
+
+  &__right {
+    grid-column: 7 span;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    max-width: 500px;
+  }
+
+}
