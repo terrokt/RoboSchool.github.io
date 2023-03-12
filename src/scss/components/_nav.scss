@@ -1,0 +1,23 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

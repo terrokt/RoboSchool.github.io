@@ -27,6 +27,7 @@ const rules = [
       }
     ]
   },
+
   {
     ruleSelector: '.form__input--email',
     tel: true,

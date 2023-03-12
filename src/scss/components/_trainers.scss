@@ -13,12 +13,22 @@
     margin-bottom: 75px;
   }
 
+  &__item {
+    @include small-tablet {
+
+      max-width: 220px;
+    }
+  }
+
   &__name {
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 24px;
     line-height: 160%;
     color: var(--dark-color);
+    @include large-desktop {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -27,6 +37,9 @@
     line-height: 160%;
     color: var(--dark-color);
     margin-bottom: 20px;
+    @include large-desktop {
+      font-size: 14px;
+    }
   }
 
   &__btn {
@@ -39,6 +52,9 @@
   &__image {
     margin-bottom: 20px;
     height: 500px;
+    @include small-tablet {
+      height: 306px;
+    }
   }
 
   &__scroll{
@@ -50,6 +66,17 @@
 
   &__nav {
     @include flex-all-sb;
+  }
+
+  &__btns{
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+
+  @include small-tablet {
+    padding: 40px 0;
   }
 
 

@@ -1,16 +1,24 @@
 .hero {
   padding-top: 165px;
-
   background-color: var(--dark-color);
 
   &__container {
     @include flex;
     align-items: center;
 
+    @include small-tablet {
+      position: relative;
+      flex-direction: column;
+    }
   }
 
   &__content {
     max-width: 516px;
+
+    @include small-tablet {
+      z-index: 1;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -26,18 +34,48 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 160%;
+
+      @include small-tablet {
+        margin-bottom: 280px;
+        min-width: 300px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+      }
+    }
+
+    @include small-tablet {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 160%;
+      text-align: center;
     }
   }
 
   &__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    max-width: 263px;
+
+    @include small-tablet {
+      margin: 0 auto;
+    }
   }
 
   &__img {
     transform: translateX(50px);
+
+    @include small-tablet {
+      width: 273px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
   }
 
-
+  @include small-tablet {
+    padding-bottom: 40px;
+  }
 }

@@ -8,24 +8,35 @@
 
   &__container {
     @include flex-all-sb;
+
+    @include tablet {
+      justify-content: initial;
+    }
+
+
   }
 
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 40px;
+  &__phone {
+    @include tablet {
+      margin-left: auto;
+      margin-right: 10px;
+      font-size: 0;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      background-image: url(../img/phone.svg);
+      background-position: center;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
     }
   }
 
-  &__link {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 160%;
-    text-align: center;
-    color: #FFFFFF;
+  &__logo {
+    @include small-tablet {
+      max-width: 136px;
+      width: 100%;
+    }
   }
-
 }
