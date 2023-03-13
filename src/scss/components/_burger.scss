@@ -1,4 +1,6 @@
 .burger {
+
+  display: none;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
@@ -15,7 +17,7 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 
-    &:first-child{
+    &:first-child {
       margin-top: -7px;
     }
 
@@ -26,5 +28,28 @@
       transform: translateY(-50%);
     }
 
+  }
+
+  @include tablet {
+    display: block;
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: var(--container-offset);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    background-image: url(../img/close.svg);
+    background-position: center;
+    background-size: 14px 12px;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      display: block;
+    }
   }
 }

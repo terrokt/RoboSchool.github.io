@@ -6,6 +6,8 @@ import { enableScroll } from '../functions/enable-scroll';
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
+  const menuClose = document?.querySelector('[data-menu-close]');
+
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
@@ -22,6 +24,14 @@ import { enableScroll } from '../functions/enable-scroll';
     }
   });
 
+  menuClose?.addEventListener('click', () => {
+    burger?.setAttribute('aria-expanded', 'false');
+    burger?.setAttribute('aria-label', 'Открыть меню');
+    burger.classList.remove('burger--active');
+    menu.classList.remove('menu--active');
+    enableScroll();
+  });
+
   overlay?.addEventListener('click', () => {
     burger?.setAttribute('aria-expanded', 'false');
     burger?.setAttribute('aria-label', 'Открыть меню');
@@ -29,6 +39,8 @@ import { enableScroll } from '../functions/enable-scroll';
     menu.classList.remove('menu--active');
     enableScroll();
   });
+
+
 
   menuItems?.forEach(el => {
     el.addEventListener('click', () => {
