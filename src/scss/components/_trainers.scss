@@ -52,6 +52,7 @@
   &__image {
     margin-bottom: 20px;
     height: 500px;
+    border-radius: 10px;
     @include small-tablet {
       height: 306px;
     }

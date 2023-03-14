@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+  }
+}
