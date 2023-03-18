@@ -48,7 +48,9 @@
 .graph-modal {
   &__container {
     padding: 40px;
-    height: 768px;
+    width: 100%;
+    max-width: 940px;
+
   }
 
   &__close {
@@ -61,6 +63,11 @@
     line-height: 160%;
     color: var(--dark-transparent-color);
     background-image: none;
+
+    @include mobile {
+      top: 10px;
+      right: 10px;
+    }
   }
 
 }
@@ -71,6 +78,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include mobile {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    &-item {
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
 
     &-btn--active {
       color: var(--accent-color);
@@ -89,10 +108,34 @@
       }
     }
 
+    &__panel {
+      padding-right: 20px;
+    }
+
     &-wrapper {
       border-bottom: 1px solid rgba(20, 16, 36, 0.11);
       margin-bottom: 20px;
 
+
     }
   }
+
+  &__bottom {
+    max-height: 375px;
+  }
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 5px;
+  background: rgba(20, 16, 36, 0.08);
+  border-radius: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.simplebar-scrollbar::before{
+  left: 0;
+  right: 0;
+  opacity: 1;
+  width: 5px;
+  background-color: var(--dark-color);
 }
